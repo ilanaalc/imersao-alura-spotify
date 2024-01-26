@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Imersão</title>
+    <link rel="icon" href="src/assets/icons/favicon.png" type="image/png">
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/vars.css">
     <link rel="stylesheet" href="src/styles/sidebar-footer.css">
@@ -12,8 +13,11 @@
     <link rel="stylesheet" href="src/styles/media-queries.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
         integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
-    <<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
         integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-nxq+DhLvMgV6OaDhoX9bWJoZI4U8KsQ6LgF5VQtYi1R/6t4GzTkuFjk9YbeZa3Xj3Q8I53z07zP/zxU3Kpsjkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -77,10 +81,10 @@
             <nav class="header__navigation">
                 <div class="navigation">
                     <button class="arrow-left">
-                        <img src="src/assets/icons/small-left.png" alt="Seta esquerda" />
+                        <i class="fas fa-arrow-left" alt="Seta esquerda"></i>
                     </button>
                     <button class="arrow-right">
-                        <img src="src/assets/icons/small-right.png" alt="Seta direita" />
+                        <i class="fas fa-arrow-right" alt="Seta direita"></i>
                     </button>
 
                     <div class="header__search">
@@ -103,8 +107,7 @@
                     </div>
                     <div class="offer__scroll-container">
                         <div class="offer__list">
-                            <section class="offer__list-item"
-                                style="grid-template-columns: repeat(4, minmax(200px, 1fr));">
+                            <section class="offer__list-item">
                                 <a href class="cards">
                                     <div class="cards card1">
                                         <img src="src/assets/playlist/1.jpeg" alt="">
@@ -213,24 +216,27 @@
                         </div>
                     </div>
                 </div>
-                <div id="result-artist" class="hidden">
-                    <div class="grid-container">
-                        <div class="card-img">
-                            <img id="artist-img" class="artist-img">
-                            <div class="play">
-                                <span class="fa fa-solid fa-play"></span>
-                            </div>
-                        </div>
-                        <div class="card-text">
-                            <a title="Foo Fighters" class="vst" href></a>
-                            <span class="artist-name" id="artist-name"></span>
-                            <span class="artist-categorie">Artista</span>
-                        </div>
-                    </div>
+
+        <div id="result-artist" class="hidden">
+          <div class="grid-container">
+            <div class="artist-card" id="">
+              <div class="card-img">
+                <img id="artist-img" class="artist-img"/>
+                <div class="play">
+                  <span class="fa fa-solid fa-play"></span>
                 </div>
+                <p id="no-results-message" class="hidden">Sem resultados encontrados.</p>
+              </div>
+              <div class="card-text">
+                <a title="Foo Fighters" class="vst" href=""></a>
+                <span class="artist-name" id="artist-name"></span>
+                <span class="artist-categorie">Artista</span>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
+      </div>
     </main>
 
     <footer class="disclaimer-premium">
@@ -243,6 +249,9 @@
             <button type="button">Inscreva-se grátis</button>
         </div>
     </footer>
+
+    <script src="search.js" type="text/javascript"></script>
+    <script src="hours.script.js" type="text/javascript"></script>
 </body>
 
 </html>

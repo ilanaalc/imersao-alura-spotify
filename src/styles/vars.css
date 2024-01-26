@@ -4,8 +4,17 @@
     /* COLORS */
     --bg-icon: #FFFBF5;
     --bg-arrow-color: #33186B;
+    --grid-gap: 24px;
+    --column-count: 5;
+
+
     --text-sub: #FFFBF5;
     --text-base-dark: #000;
     --text-base-light: #FFFBF5;
 
+    @media screen and (max-width: 767px) {
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1274px) {
+    }
 }

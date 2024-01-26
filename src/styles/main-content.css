@@ -26,7 +26,7 @@
 .header__navigation .navigation .arrow-left {
     margin-right: 1.25rem;
 }
-
+  
 .arrow-left,
 .arrow-right {
     display: flex;
@@ -35,10 +35,14 @@
     width: 32px;
     height: 32px;
     background: var(--bg-icon);
-    background-color: #3C0753;
+    background-color: #5D3587;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+}
+
+.arrow-left i, .arrow-right i {
+    color: #FFFBF5;
 }
 
 .header__login {
@@ -61,6 +65,7 @@
     width: 16px;
     height: 16px;
     margin-left: 10px;
+    color: #FFFBF5;
 }
 
 .header__search input {
@@ -74,6 +79,10 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
+#search-input::placeholder {
+    color: #FFFBF5;
+  }
 
 .header__login .subscribe {
     color: var(--text-sub);
@@ -142,10 +151,10 @@
 .offer__list-item {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 32px;
-    margin-bottom:  16px;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
 .cards {
@@ -256,7 +265,7 @@
 }
 
 .artist-card {
-    background: #181818;
+    background: #5D3587;
     border-radius: 8px;
     -ms-flex: 1;
     flex: 1;
@@ -264,27 +273,32 @@
     padding: 16px;
     position: relative;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: 180px;
+    height: 290px;
 }
 
 .artist-card:hover {
-    background-color: #252525;
+    background-color: #3C0753;
 }
 
 .card-img {
     padding-bottom: 100%;
     position: relative;
-    width: 100%;
+    width: 180px;
     margin-bottom: 16px;
 }
 
-.artist-img {
-    height: 100%;
+#artist-img {
+    height: 80%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%;
     border-radius: 50%;
+}
+
+.img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 .card-text {
@@ -312,7 +326,7 @@
 }
 
 .artist-categorie {
-    color: #6a6a6a;
+    color: #fff;
     font-weight: 400;
     font-size: 0.875rem;
 }
@@ -323,8 +337,8 @@
 
 .play .fa-play {
     position: relative;
-    right: 10px;
-    top: 120px;
+    left: 120px;
+    top: 140px;
     padding: 18px;
     background-color: #1db954;
     border-radius: 100%;
@@ -333,7 +347,12 @@
     transition: all ease 0.4s;
 }
 
-.artist-card:hover {
+.artist-card:hover .play .fa-play {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.play .fa-play:hover {
     padding: 20px;
     cursor: pointer;
 }
@@ -341,4 +360,8 @@
 #result-artist {
     padding: 20px 40px;
 }
+
+.hidden {
+    display: none;
+  }
 /* FIM CARD ARTISTA */
